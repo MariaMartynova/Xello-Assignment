@@ -1,0 +1,40 @@
+h1 {
+	text-align: center;
+	margin: 2em 1em;
+}
+
+.col {
+	text-align: center;
+}
+
+.container {
+	margin-bottom: 100em;
+}
+
+:host::ng-deep .app-tooltip {
+	margin: 15px;
+	position: relative;
+
+	.message {
+		background-color: #8e4585;
+		padding: 5px 10px;
+		color: white;
+		border-radius: 10px;
+
+		&::after {
+		  content: " ";
+		  position: absolute;
+		  bottom: 115%;
+		  left: 50%;
+		  margin-left: -5px;
+		  border-width: 5px;
+		  border-style: solid;
+		  border-color: transparent transparent  #8e4585 transparent;
+		}
+	}
+
+	&.top .message::after {
+	  top: 114%;
+	  border-color: #8e4585 transparent transparent transparent;
+	}
+}
